@@ -133,6 +133,8 @@
 
   function processNextLock(callback) {
     if (activeLocks.length === 0) { callback && callback(); return; }
+    if (activeLocks.length > 1) { return; }
+
     var lock = activeLocks[0];
     lock._execute.call(lock, function then() {
       lock.closed = true;
