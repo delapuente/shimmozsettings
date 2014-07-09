@@ -25,7 +25,6 @@
   'use strict';
 
   var window = this;
-  var asyncStorage = window.asyncStorage;
 
   var activeLocks = [];
   var observers = {};
